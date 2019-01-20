@@ -1,0 +1,18 @@
+<div>
+<h1>
+  Topics are {{title}}
+</h1>
+</div>
+<div> Months :
+    <select (change)="dropdown($event)">
+       <option *ngFor="let i of array">{{i}}</option>
+    </select>
+ </div>
+ <div> 
+    <span *ngIf="isavailable; then condition1 else condition2">Condition is Valid</span>
+ <ng-template #condition1>Condition1 is not Valid</ng-template>
+ <ng-template #condition2>Condition2 is not Valid</ng-template>
+  </div>
+  <div>
+    <button (click)="buttonclick($event)">Clickme!</button>
+  </div>
